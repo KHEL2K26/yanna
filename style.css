@@ -1,1 +1,133 @@
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: 'Poppins', sans-serif;
+}
 
+body{
+    height:100vh;
+    background:url('background.jpg'); /* 🔁 CHANGE BACKGROUND */
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    overflow:hidden;
+}
+
+/* PASSWORD SCREEN */
+.password-screen{
+    position:absolute;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.8);
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    color:white;
+}
+
+.password-screen input{
+    padding:10px;
+    border:none;
+    border-radius:5px;
+    margin-top:10px;
+}
+
+.password-screen button{
+    padding:10px 20px;
+    margin-top:10px;
+    border:none;
+    background:#ff4d6d;
+    color:white;
+    cursor:pointer;
+}
+
+/* COUNTDOWN */
+.countdown{
+    position:absolute;
+    font-size:60px;
+    color:white;
+    display:none;
+}
+
+/* ENVELOPE */
+.envelope{
+    position:relative;
+    width:300px;
+    height:200px;
+    background:#ff4d6d;
+    display:none;
+    cursor:pointer;
+}
+
+.envelope:before{
+    content:"";
+    position:absolute;
+    top:0;
+    border-left:150px solid transparent;
+    border-right:150px solid transparent;
+    border-top:100px solid #ff758f;
+    transition:1s;
+    transform-origin:top;
+}
+
+.envelope.open:before{
+    transform:rotateX(180deg);
+}
+
+/* LETTER */
+.letter{
+    position:absolute;
+    width:90%;
+    max-width:600px;
+    padding:30px;
+    background:rgba(88, 47, 199, 0.2);
+    backdrop-filter:blur(12px);
+    border-radius:20px;
+    text-align:center;
+    color:white;
+    display:none;
+}
+
+.letter h1{
+    margin-bottom:20px;
+    color:red;
+}
+
+.typewriter{
+    border-right:3px solid white;
+    white-space:pre-line;
+    overflow:hidden;
+}
+
+/* FLOATING HEARTS */
+.heart{
+    position:absolute;
+    color:#ff4d6d;
+    font-size:20px;
+    animation:float 5s linear infinite;
+}
+
+@keyframes float{
+    from{
+        transform:translateY(100vh) scale(1);
+        opacity:1;
+    }
+    to{
+        transform:translateY(-10vh) scale(1.5);
+        opacity:0;
+    }
+}
+
+/* FIREWORKS */
+canvas{
+    position:absolute;
+    top:0;
+    left:0;
+}
+
+</style>
